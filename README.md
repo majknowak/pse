@@ -49,7 +49,7 @@ For our use case, it's enough to just check the last two available price records
 - If there is a move from positive to negative or vice versa, the `send_sms` function is triggered.
 - Depending on the price, the SMS body indicates to the end user if it just became positive or negative.
 
-### Logging and Prevention
+### Logging and "Spam" Prevention
 
 There are a few more features covering logging and, more importantly, preventing the script from notifying the user about the same price event multiple times:
 
@@ -63,3 +63,6 @@ The script is stored at [PythonAnywhere](https://www.pythonanywhere.com/) to ena
 
 For SMS notifications, I've used [Twilio](https://www.twilio.com/en-us). It's easy to set up and not very costly.
 
+
+
+That's it! Simple but doing the job!
