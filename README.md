@@ -11,7 +11,7 @@ But it turned out PSE publishes the same kind of information via API 😍
 
 This way, I was able to use my little Python knowledge to come up with a solution that does the job perfectly.
 
-See the full code here: `pse_gh.py`.
+See the full code here: [pse_gh.py](https://github.com/majknowak/pse/blob/9aea94ccb4ff2e777432124e3e5b0ace729997ad/pse_gh.py)
 
 ## What's it all about?
 
