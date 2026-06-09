@@ -76,8 +76,7 @@ def fetch_data():
     today = datetime.utcnow().strftime("%Y-%m-%d")
     params = {
         "$select": "business_date,cen_fcst,period",
-        "$filter": f"business_date eq '{today}'",
-        "$orderby": "period asc"
+        "$filter": f"business_date eq '{today}'"
     }
     response = requests.get(API_URL, params=params, timeout=30)
     response.raise_for_status()
