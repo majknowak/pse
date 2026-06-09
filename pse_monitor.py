@@ -74,16 +74,11 @@ def send_sms(phone: str, message: str):
 # =========================
 def fetch_data():
     today = datetime.utcnow().strftime("%Y-%m-%d")
-    params = {
-        "$select": "business_date,cen_fcst,period",
-        "$filter": f"business_date eq '{today}'"
-    }
-    response = requests.get(API_URL, params=params, timeout=30)
+    url = f"https://api.raporty.pse.pl/api/price-fcst?$select=business_date,cen_fcst,period&$filter=business_date eq '{today}'"
+    response = requests.get(url, timeout=30)
     response.raise_for_status()
-
     raw = response.json()
     data = raw["value"] if isinstance(raw, dict) and "value" in raw else raw
-
     return pd.DataFrame(data)
 
 # =========================
